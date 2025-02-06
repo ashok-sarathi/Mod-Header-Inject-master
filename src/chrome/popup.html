@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Header Inject – Options</title>
+    <link rel="stylesheet" href="../common/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <img src="../icons/logo.png" alt="Header Inject">
+            </div>
+            <div class="buttons header-right">
+                <a id="status-indicator" title="Toggle Header Inject" class="button is-small"></a>
+                <a class="button is-small"
+                    href="https://www.paypal.com/donate/?hosted_button_id=76PH63DLM57TA"
+                    title="Support us" target="_blank">Donate &#127866;</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="content">
+
+                <!-- <p class="subtitle is-5">HTTP Request Headers</p> -->
+
+                <div class="level is-marginless">
+                    <div class="level-left">
+                    </div>
+                    <div class="buttons level-right is-marginless">
+                        <button id="set-default" class="button is-warning">Set Default Headers</button>
+                        <button id="add-header" class="button">Add</button>
+                        <button id="save-headers" class="button is-link" disabled>Save</button>
+                    </div>
+                </div>             
+
+                <div id="no-headers-defined-message" class="container is-hidden">
+                    <div class="notification">No request headers are configured.</div>
+                </div>
+
+
+                <table id="http-headers" class="table is-striped">
+                    <thead>
+                        <tr>
+                            <th class="d-none">Label</th>
+                            <th title="Name of the HTTP header to be added/modified">Header name</th>
+                            <th title="New value of the HTTP header being added/modified">Header value</th>
+                            <th title="Enable or disable this HTTP header modification">Enabled</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="http-headers-table-body">
+                    </tbody>
+                </table>
+
+                <ul id="httpHeaderOverrides">
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<script type="module" src="../common/popup.js"></script>
+
+</html>
